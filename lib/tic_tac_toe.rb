@@ -86,7 +86,7 @@ def play(board)
     turn(board)
   end
   if !draw?(board)
-    puts "Congratulations "
+    puts "Congratulations #{winner(board)!}"
   else
     puts "It was a draw!"
   end
