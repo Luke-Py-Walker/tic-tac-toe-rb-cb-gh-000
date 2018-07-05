@@ -80,3 +80,14 @@ end
 def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
+
+def play(board)
+  until over?(board) do
+    turn(board)
+  end
+  if !draw?(board)
+    puts "Congratulations #{winner(board)}"
+  else
+    puts "It was a draw!"
+  end
+end
