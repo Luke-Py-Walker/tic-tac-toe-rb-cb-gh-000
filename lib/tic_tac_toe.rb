@@ -84,10 +84,10 @@ end
 def play(board)
   until over?(board) do
     turn(board)
-    if over?(board) && !draw?(board)
-      puts "Congratulations #{winner(board)}!"
-    else
-      puts "Cat's Game!"
-    end
+  end
+  if over?(board) && !draw?(board)
+    puts "Congratulations #{winner(board)}!"
+  else
+    puts "Cat's Game!"
   end
 end
